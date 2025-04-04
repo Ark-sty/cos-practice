@@ -48,7 +48,7 @@ int mod(int a, int b){
     if (a >= 0)
         return a%b;
     else
-        return a - (a / b - 1) * b;
+        return a - (a / b) * b;
 }
 
 int main(int argc, char *argv[]){
@@ -59,8 +59,8 @@ int main(int argc, char *argv[]){
     }
     a = convert(argv[1]);
     b = convert(argv[2]);
-    c = a%b;
+    c = mod(a,b);
     cout << a << " mod " << b << " = " << c << endl;
-    cout << atoi(argv[0]) << endl;
+    cout << a/b << endl;
     return 0;
 }
